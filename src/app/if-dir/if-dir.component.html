@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="items" *ngIf="data.length > 19; else noCountries">
+    <table>
+      <tr *ngFor="let countries of data">
+        <td>{{ countries.name }}</td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+<ng-template #noCountries>
+  <h3>No data available</h3>
+</ng-template>
