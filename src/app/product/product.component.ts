@@ -8,12 +8,15 @@ import { Component, OnInit } from '@angular/core';
 export class ProductComponent implements OnInit {
 
   constructor() { }
+
   productName: string = "Product --> Product details";
 
-  products = ['Test name'];
-  addProduct(newProduct: string) {
-    ;
+
+  inputvalues(airport: any) {
+    console.log('In put value is', airport)
   }
+
+
   ngOnInit(): void {
   }
 

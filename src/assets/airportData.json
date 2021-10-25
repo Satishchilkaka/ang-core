@@ -1,0 +1,37 @@
+[
+    {
+        "name": "General Edward Lawrence Logan International Airport",
+        "countryCode": "USA",
+        "regionCode": "US-MA",
+        "iataCode": "BOS",
+        "city": "Boston"
+    },
+    {
+        "name": "Buffalo Niagara International Airport",
+        "countryCode": "USA",
+        "regionCode": "US-NY",
+        "iataCode": "BUF",
+        "city": "Buffalo"
+    },
+    {
+        "name": "Baltimore/Washington International Thurgood Marshall Airport",
+        "countryCode": "USA",
+        "regionCode": "US-MD",
+        "iataCode": "BWI",
+        "city": "Baltimore"
+    },
+    {
+        "name": "Columbia Metropolitan Airport",
+        "countryCode": "USA",
+        "regionCode": "US-SC",
+        "iataCode": "CAE",
+        "city": "Columbia"
+    },
+    {
+        "name": "Columbus Air Force Base",
+        "countryCode": "USA",
+        "regionCode": "US-MS",
+        "iataCode": "CBM",
+        "city": "Columbus"
+    }
+]

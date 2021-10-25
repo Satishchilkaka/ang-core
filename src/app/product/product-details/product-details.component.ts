@@ -1,5 +1,5 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
-
+import airportName from '../../../assets/airportData.json';
 
 @Component({
   selector: 'app-product-details',
@@ -9,16 +9,18 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class ProductDetailsComponent implements OnInit {
 
   constructor() { }
+  // Data flow from PRODUCT -> product-details components
   @Input() product = '';
 
-  @Output() newProducts = new EventEmitter();
-  newProduct = [];
-  productName: string = '';
-  addNewProduct(value: string) {
-    this.newProducts.emit({
-      newProductName: this.productName
-    })
+
+  // Data flow from PRODUCT-DETAILS -> product component
+
+  @Output() airportData = new EventEmitter();
+  airport: any = airportName;
+  callProduct() {
+    this.airportData.emit(this.airport);
   }
+
 
   ngOnInit(): void {
   }

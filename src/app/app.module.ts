@@ -7,6 +7,8 @@ import { ForDirComponent } from './for-dir/for-dir.component';
 import { IfDirComponent } from './if-dir/if-dir.component';
 import { ProductComponent } from './product/product.component';
 import { ProductDetailsComponent } from './product/product-details/product-details.component';
+import { ItemComponent } from './item/item.component';
+import { ItemDetailsComponent } from './item/item-details/item-details.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ProductDetailsComponent } from './product/product-details/product-detai
     ForDirComponent,
     IfDirComponent,
     ProductComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    ItemComponent,
+    ItemDetailsComponent
   ],
   imports: [
     BrowserModule,
