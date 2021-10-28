@@ -11,8 +11,8 @@ export class ProductComponent implements OnInit {
 
   productName: string = "Product --> Product details";
 
-
-  inputvalues(airport: any) {
+  airport: any
+  airportData(airport: any) {
     console.log('In put value is', airport)
   }
 

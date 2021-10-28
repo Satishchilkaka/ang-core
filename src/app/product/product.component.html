@@ -1,3 +1,5 @@
 <!-- <app-product-details [product]="productName"></app-product-details> -->
 
-<app-product-details (airportData)="inputvalues($event)"></app-product-details>
+<app-product-details (airportData)="airportData($event)">
+  {{ airport }}
+</app-product-details>

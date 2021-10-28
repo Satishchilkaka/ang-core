@@ -10,7 +10,7 @@ export class ItemComponent implements OnInit {
 
   constructor() { }
 
-  items = airportName[1];
+  airports = airportName[1];
   item = 'Data flow from Item -> Item details  !!!';
 
   ngOnInit(): void {

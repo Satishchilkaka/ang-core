@@ -17,6 +17,7 @@ export class ProductDetailsComponent implements OnInit {
 
   @Output() airportData = new EventEmitter();
   airport: any = airportName;
+
   callProduct() {
     this.airportData.emit(this.airport);
   }
