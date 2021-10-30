@@ -3,29 +3,28 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductComponent } from './product/product.component';
-import { ProductDetailsComponent } from './product/product-details/product-details.component';
 import { ItemComponent } from './item/item.component';
 import { ItemDetailsComponent } from './item/item-details/item-details.component';
-import { HeaderComponent } from './components/header/header.component';
-import { FooterComponent } from './components/footer/footer.component';
-import { ContentComponent } from './components/content/content.component';
+
+import { FooterComponent } from './features/footer/footer.component';
+import { ContentComponent } from './features/content/content.component';
+import { HeaderModule } from './shared/header/header.module';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProductComponent,
-    ProductDetailsComponent,
+
     ItemComponent,
     ItemDetailsComponent,
-    HeaderComponent,
+
     FooterComponent,
     ContentComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HeaderModule
   ],
   providers: [],
   bootstrap: [AppComponent]
