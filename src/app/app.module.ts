@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { ContentComponent } from './features/content/content.component';
 import { HeaderModule } from './shared/header/header.module';
 import { FooterModule } from './shared/footer/footer.module';
+import { SearchBarComponent } from './features/search-bar/search-bar.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     ContentComponent,
+    SearchBarComponent,
   ],
   imports: [
     BrowserModule,
