@@ -7,9 +7,17 @@ import countriesData from '../../../assets/data.json';
 })
 export class ContentComponent implements OnInit {
 
-  constructor() { }
+
   countries = countriesData;
+
+  test: boolean
+  constructor() {
+    this.test = false;
+  }
+
+
   ngOnInit(): void {
+
   }
 
 }
