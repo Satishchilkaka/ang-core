@@ -7,6 +7,8 @@ import { ContentComponent } from './features/content/content.component';
 import { HeaderModule } from './shared/header/header.module';
 import { FooterModule } from './shared/footer/footer.module';
 import { SearchBarComponent } from './features/search-bar/search-bar.component';
+import { NameComponent } from './features/name/name.component';
+import { DisplayNameComponent } from './features/name/display-name/display-name.component';
 
 
 @NgModule({
@@ -14,6 +16,8 @@ import { SearchBarComponent } from './features/search-bar/search-bar.component';
     AppComponent,
     ContentComponent,
     SearchBarComponent,
+    NameComponent,
+    DisplayNameComponent,
   ],
   imports: [
     BrowserModule,
