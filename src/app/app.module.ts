@@ -7,8 +7,9 @@ import { ContentComponent } from './features/content/content.component';
 import { HeaderModule } from './shared/header/header.module';
 import { FooterModule } from './shared/footer/footer.module';
 import { SearchBarComponent } from './features/search-bar/search-bar.component';
-import { NameComponent } from './features/name/name.component';
-import { DisplayNameComponent } from './features/name/display-name/display-name.component';
+import { NameDisplayComponent } from './features/name-display/name-display.component';
+import { NameDetailsComponent } from './features/name-display/name-details/name-details.component';
+import { UpdateNameComponent } from './features/name-display/update-name/update-name.component';
 
 
 @NgModule({
@@ -16,8 +17,9 @@ import { DisplayNameComponent } from './features/name/display-name/display-name.
     AppComponent,
     ContentComponent,
     SearchBarComponent,
-    NameComponent,
-    DisplayNameComponent,
+    NameDisplayComponent,
+    NameDetailsComponent,
+    UpdateNameComponent,
   ],
   imports: [
     BrowserModule,
