@@ -11,7 +11,7 @@ export class NameDisplayComponent implements OnInit {
   newName: string = 'Frank Smith'
 
 
-  inputName: string = 'Test name(input dir)'
+  inputName: string = 'John'
 
   updateName(newName: string) {
     this.newName = newName
