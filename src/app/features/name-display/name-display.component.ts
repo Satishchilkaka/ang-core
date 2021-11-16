@@ -8,11 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class NameDisplayComponent implements OnInit {
 
   constructor() { }
-  fullName: string = 'Frank Smith'
+  newName: string = 'Frank Smith'
 
-  newNames: string = '';
+
+  inputName: string = 'Test name(input dir)'
+
   updateName(newName: string) {
-    this.newNames = newName
+    this.newName = newName
   }
   ngOnInit(): void {
   }
