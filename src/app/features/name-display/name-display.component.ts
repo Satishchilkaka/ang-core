@@ -9,14 +9,14 @@ export class NameDisplayComponent implements OnInit {
 
   constructor() { }
   newName: string = 'Frank Smith'
-
-
-  inputName: string = 'John'
+  inputName: string = 'Smith'
 
   updateName(newName: string) {
     this.newName = newName
   }
+
   ngOnInit(): void {
+
   }
 
 }
