@@ -11,6 +11,7 @@ import { NameDisplayComponent } from './features/name-display/name-display.compo
 import { NameDetailsComponent } from './features/name-display/name-details/name-details.component';
 import { UpdateNameComponent } from './features/name-display/update-name/update-name.component';
 import { CyclesComponent } from './cycles/cycles.component';
+import { OnChangesComponent } from './cycles/on-changes/on-changes.component';
 
 
 @NgModule({
@@ -22,6 +23,8 @@ import { CyclesComponent } from './cycles/cycles.component';
     NameDetailsComponent,
     UpdateNameComponent,
     CyclesComponent,
+    OnChangesComponent,
+
   ],
   imports: [
     BrowserModule,
