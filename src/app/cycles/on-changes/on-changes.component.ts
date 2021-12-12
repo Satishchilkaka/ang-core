@@ -11,7 +11,7 @@ export class OnChangesComponent implements OnChanges, OnInit {
 
   @Input() newData: any;
   onChanges() {
-    this.newData + 1;;
+    this.newData = this.newData + 1;;
   }
 
   ngOnChanges(changes: SimpleChanges): void {

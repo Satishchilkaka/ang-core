@@ -8,9 +8,9 @@ import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
 export class CyclesComponent implements OnInit, OnChanges {
   data = 0;
   constructor() { }
-  changeData() {
-    this.data + 1;
-  }
+  // changeData() {
+  //   this.data + 1;
+  // }
   ngOnChanges(changes: SimpleChanges): void {
     console.log(changes)
   }
