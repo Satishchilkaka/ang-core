@@ -23,5 +23,5 @@ https://stackoverflow.com/questions/40393701/what-is-ngmodule-actually-in-angula
     - providers
     - imports
     - exports 
-- Providers are different. They can be bundled with an NgModule, but they are not bound by the rules of component encapsulation.  These encapsulation rules only apply to components, directives, pipes, and other NgModules.
+- Providers are different. They can be bundled with an NgModule, but they are not bound by the rules of component encapsulation.  NgMOdule encapsulation rules only apply to components, directives, pipes, and other NgModules.
 - Providers are registered with the closest injector (more on this later when we cover services)
