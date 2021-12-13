@@ -14,7 +14,7 @@ https://stackoverflow.com/questions/40393701/what-is-ngmodule-actually-in-angula
 
 - In Angular, an NgModule allows you to bundle components, directives, pipes, and providers together into one re-usable module.
 - An NgModule is analogous to a library DLL. It contains things that can be leveraged by other NgModules just by importing them. You can also make some things private to the NgModule so that noone can see them (except for components declared from the same NgModule) while other things can be made public.  This concept is called NgModule encapsulation.
-- Components, directives, pipes are declared once (and only once) in an NgModule. A component/direcive/pipe cannot be declared in multiple modules.
+- Components, directives, pipes are declared once (and only once) in an NgModule. The same component/direcive/pipe cannot be declared in multiple modules.
 - In component encapsulation, Components, directives, and pipes may be private to the NgModule (noone can see it except for components within the same module). Only exported components are visible to the client code using your module.
 - Other NgModules can be imported by your NgModule to re-use its exported Modules/components.
 - NgModules/component/directives/pipes can be exported by your module.  But only other NgModules can be imported into your module.
