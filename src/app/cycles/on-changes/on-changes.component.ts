@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, OnChanges, SimpleChange, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Input, EventEmitter, OnChanges, SimpleChange, SimpleChanges, Output } from '@angular/core';
 
 @Component({
   selector: 'app-on-changes',
@@ -10,12 +10,13 @@ export class OnChangesComponent implements OnChanges, OnInit {
   constructor() { }
 
   @Input() newData: any;
+  @Output() dataChange = new EventEmitter();
   onChanges() {
-    this.newData = this.newData + 1;;
+    this.dataChange.next(this.newData + 10);
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes);
+    console.log('tes', changes);
 
   }
   ngOnInit(): void {

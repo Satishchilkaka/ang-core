@@ -6,13 +6,15 @@ import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
   styleUrls: ['./cycles.component.css']
 })
 export class CyclesComponent implements OnInit, OnChanges {
-  data = 0;
+  data: any = 0;
+
   constructor() { }
   // changeData() {
   //   this.data + 1;
   // }
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes)
+  dataN: number = 10;
+  ngOnChanges(): void {
+
   }
   ngOnInit(): void {
   }
