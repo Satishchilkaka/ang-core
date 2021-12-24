@@ -12,7 +12,7 @@ export class CyclesComponent implements OnInit, OnChanges {
   // changeData() {
   //   this.data + 1;
   // }
-  dataN: number = 10;
+  dataN: number = 1;
   ngOnChanges(): void {
 
   }
