@@ -1,0 +1,4 @@
+<!-- <app-on-changes [(newData)]="data"></app-on-changes> -->
+
+<app-on-changes [newData]="data" (dataChange)="data = $event"></app-on-changes>
+<p>{{ data }}</p>

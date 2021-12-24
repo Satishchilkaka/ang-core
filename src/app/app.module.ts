@@ -10,6 +10,8 @@ import { SearchBarComponent } from './features/search-bar/search-bar.component';
 import { NameDisplayComponent } from './features/name-display/name-display.component';
 import { NameDetailsComponent } from './features/name-display/name-details/name-details.component';
 import { UpdateNameComponent } from './features/name-display/update-name/update-name.component';
+import { CyclesComponent } from './cycles/cycles.component';
+import { OnChangesComponent } from './cycles/on-changes/on-changes.component';
 
 
 @NgModule({
@@ -20,6 +22,9 @@ import { UpdateNameComponent } from './features/name-display/update-name/update-
     NameDisplayComponent,
     NameDetailsComponent,
     UpdateNameComponent,
+    CyclesComponent,
+    OnChangesComponent,
+
   ],
   imports: [
     BrowserModule,

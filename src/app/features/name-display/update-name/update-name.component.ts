@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output, Input } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 
 @Component({
@@ -16,6 +16,7 @@ export class UpdateNameComponent implements OnInit {
     this.updateName.emit(value);
   }
   ngOnInit(): void {
+
   }
 
 }
