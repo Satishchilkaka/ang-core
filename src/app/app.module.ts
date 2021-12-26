@@ -12,6 +12,7 @@ import { NameDetailsComponent } from './features/name-display/name-details/name-
 import { UpdateNameComponent } from './features/name-display/update-name/update-name.component';
 import { CyclesComponent } from './cycles/cycles.component';
 import { OnChangesComponent } from './cycles/on-changes/on-changes.component';
+import { TestModule } from './test/test.module';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { OnChangesComponent } from './cycles/on-changes/on-changes.component';
     BrowserModule,
     AppRoutingModule,
     HeaderModule,
-    FooterModule
+    FooterModule,
+    TestModule
   ],
   providers: [],
   bootstrap: [AppComponent]
