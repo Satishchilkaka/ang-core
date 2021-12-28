@@ -13,6 +13,10 @@ import { UpdateNameComponent } from './features/name-display/update-name/update-
 import { CyclesComponent } from './cycles/cycles.component';
 import { OnChangesComponent } from './cycles/on-changes/on-changes.component';
 import { TestModule } from './test/test.module';
+import { FetchDataComponent } from './features/fetch-data/fetch-data.component';
+import { PersonDetailsService } from './person-details.service';
+import { PersonInfoComponent } from './features/person-info/person-info.component';
+import { PersonDetailsComponent } from './features/person-info/person-details/person-details.component';
 
 
 @NgModule({
@@ -25,6 +29,9 @@ import { TestModule } from './test/test.module';
     UpdateNameComponent,
     CyclesComponent,
     OnChangesComponent,
+    FetchDataComponent,
+    PersonInfoComponent,
+    PersonDetailsComponent,
 
   ],
   imports: [
@@ -34,7 +41,8 @@ import { TestModule } from './test/test.module';
     FooterModule,
     TestModule
   ],
-  providers: [],
+  providers: [PersonDetailsService],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }

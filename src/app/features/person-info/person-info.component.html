@@ -1,0 +1,34 @@
+<app-person-details [pData]="personData"></app-person-details>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>
+        Person details:
+      </h3>
+      <button class="btn btn-primary" (click)="fetchPersonData()">
+        Get Data
+      </button>
+      <li>
+        FirstName:<strong>{{ pData.firstName }}</strong>
+      </li>
+      <li>LastName: {{ pData.lastName }}</li>
+      <li>Email: {{ pData.email }}</li>
+      <li>Phone: {{ pData.phone }}</li>
+      <li>Address: {{ pData.address }}</li>
+    </div>
+  </div>
+</div>
+
+<!-- <div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>
+        <details>
+          <li>Test</li>
+          <li>0Test</li>
+        </details>
+      </h3>
+    </div>
+  </div>
+</div> -->
