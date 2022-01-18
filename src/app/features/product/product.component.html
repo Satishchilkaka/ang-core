@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12">
+      <h3>
+        Get product details
+      </h3>
+      <button class="btn btn-primary" (click)="products()">
+        Get product
+      </button>
+      <ul>
+        <li *ngFor="let productCount of productData">
+          {{ productCount }}
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
