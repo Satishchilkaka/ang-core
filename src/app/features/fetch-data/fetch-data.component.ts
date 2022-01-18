@@ -1,22 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-// import { PersonDetailsService } from "/Users/satishch/Documents/GitHub/exp/ang-core/src/app/person-details.service"
 
-import { PersonDetailsService } from '../../person-details.service'
+import { PersonServiceService } from '../../data-services/person-service.service';
 
 @Component({
   selector: 'app-fetch-data',
   templateUrl: './fetch-data.component.html',
   styleUrls: ['./fetch-data.component.css'],
-  providers: [PersonDetailsService]
+  providers: [PersonServiceService]
 })
 export class FetchDataComponent implements OnInit {
 
   infoRec: any = [];
 
-  constructor(private rec: PersonDetailsService) { }
+  constructor(private rec: PersonServiceService) { }
   display() {
 
-    this.infoRec = this.rec.getInfo();
+    this.infoRec = this.rec.getPersonInfo();
     console.log(this.infoRec)
 
   }

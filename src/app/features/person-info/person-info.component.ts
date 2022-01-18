@@ -8,8 +8,10 @@ import { PersonServiceService } from '../../data-services/person-service.service
 })
 export class PersonInfoComponent implements OnInit {
 
-  constructor(private getData: PersonServiceService) { }
-  personData: any = this.getData.getPersonInfo()
+  constructor(private personService: PersonServiceService) {
+    this.personData = this.personService.getPersonInfo();
+  }
+  personData: any = [];
   pData: any = []
 
   fetchPersonData() {

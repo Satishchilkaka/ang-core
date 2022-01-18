@@ -1,5 +1,6 @@
 <app-person-details [pData]="personData"></app-person-details>
 
+<hr />
 <div class="container">
   <div class="row">
     <div class="col-md-12">
@@ -9,13 +10,13 @@
       <button class="btn btn-primary" (click)="fetchPersonData()">
         Get Data
       </button>
-      <li>
+      <p>
         FirstName:<strong>{{ pData.firstName }}</strong>
-      </li>
-      <li>LastName: {{ pData.lastName }}</li>
-      <li>Email: {{ pData.email }}</li>
-      <li>Phone: {{ pData.phone }}</li>
-      <li>Address: {{ pData.address }}</li>
+      </p>
+      <p>LastName: {{ pData.lastName }}</p>
+      <p>Email: {{ pData.email }}</p>
+      <p>Phone: {{ pData.phone }}</p>
+      <p>Address: {{ pData.address }}</p>
     </div>
   </div>
 </div>
