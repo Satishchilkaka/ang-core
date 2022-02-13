@@ -18,6 +18,8 @@ import { PersonInfoComponent } from './features/person-info/person-info.componen
 import { PersonDetailsComponent } from './features/person-info/person-details/person-details.component';
 import { ProductComponent } from './features/product/product.component';
 
+import { LoginFormComponent } from './features/login-form/login-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -34,13 +36,17 @@ import { ProductComponent } from './features/product/product.component';
     PersonDetailsComponent,
     ProductComponent,
 
+    LoginFormComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HeaderModule,
     FooterModule,
-    TestModule
+    TestModule,
+    ReactiveFormsModule,
+
   ],
 
   bootstrap: [AppComponent]

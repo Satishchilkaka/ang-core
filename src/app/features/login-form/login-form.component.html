@@ -1,0 +1,34 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <form [formGroup]="login" (ngSubmit)="data()">
+        <div class="form-group">
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            class="form-control"
+            formControlName="email"
+          />
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            class="form-control"
+            formControlName="password"
+          />
+        </div>
+        <button
+          class="ml-8 whitespace-nowrap inline-flex items-left justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-500 hover:bg-black"
+          type="submit"
+          (click)="loginTo()"
+        >
+          Login
+        </button>
+      </form>
+      <div class="form-val">
+        {{ login.value | json }}
+      </div>
+    </div>
+  </div>
+</div>
