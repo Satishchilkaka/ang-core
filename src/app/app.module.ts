@@ -20,6 +20,8 @@ import { ProductComponent } from './features/product/product.component';
 
 import { LoginFormComponent } from './features/login-form/login-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { OutProductComponent } from './concepts/in-out/out-product/out-product.component';
+import { InProductComponent } from './concepts/in-out/Out-product/in-product/in-product.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +39,9 @@ import { ReactiveFormsModule } from '@angular/forms';
     ProductComponent,
 
     LoginFormComponent,
+     OutProductComponent,
+     InProductComponent,
+
 
   ],
   imports: [

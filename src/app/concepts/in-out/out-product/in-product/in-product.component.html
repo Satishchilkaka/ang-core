@@ -1,0 +1,69 @@
+<strong><h3>Get product from out-product comp</h3> </strong>
+<!-- <div *ngIf="product">
+  <pre>{{ product | json }}</pre>
+  <div *ngFor="let item of product">
+    <ul>
+      <li>
+        Product Name: <strong>{{ item.productName }}</strong>
+      </li>
+      <li>
+        Product Price: <strong>{{ item.productPrice }}</strong>
+      </li>
+      <li>
+        Product Description: <strong>{{ item.productDescription }}</strong>
+      </li>
+    </ul>
+  </div>
+</div> -->
+<strong><h3>Send product name, price, Description to out-prod</h3></strong>
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <div class="form">
+        <div class="form-group">
+          <label for="productName">Product Name:</label>
+          <input
+            #productDetails
+            type="text"
+            class="form-control"
+            id="productName"
+            name="productName"
+            placeholder="Enter product name"
+          />
+          <label for="productPrice">Product Price:</label>
+          <input
+            #productPrice
+            type="text"
+            class="form-control"
+            id="productPrice"
+            name="productPrice"
+            placeholder="Enter product price"
+          />
+          <label for="productDescription">Product Description:</label>
+          <input
+            #productDescription
+            type="text"
+            class="form-control"
+            id="productDescription"
+            name="productDescription"
+            placeholder="Enter product description"
+          />
+        </div>
+        <button
+          type="submit"
+          class="btn text-white bg-blue-500 hover:bg-black"
+          (click)="
+            onSendProduct(
+              productDetails.value,
+              productDescription.value,
+              productPrice.value
+            )
+          "
+        >
+          Send Product
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
