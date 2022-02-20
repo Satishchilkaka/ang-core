@@ -39,10 +39,10 @@ export class OutProductComponent implements OnInit {
   pDescription: any
   pName: any
   pPrice: any
-  onGetProductInfo(name: any, description: any, price: any,) {
+  onGetProductInfo(name: any, price: any, description: any,) {
     this.pName = name,
-      this.pDescription = description,
-      this.pPrice = price
+      this.pPrice = price,
+      this.pDescription = description
   }
   ngOnInit(): void {
   }

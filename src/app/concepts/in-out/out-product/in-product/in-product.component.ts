@@ -8,7 +8,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class InProductComponent implements OnInit {
 
   constructor() { }
-
+  @Input() testProduct: any;
   @Input() product: any;
   @Output() getProductInfo = new EventEmitter<any>();
   onSendProduct(name: string, price: string, description: string) {
