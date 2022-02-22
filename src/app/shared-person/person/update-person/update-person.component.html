@@ -1,0 +1,24 @@
+<div *ngIf="pName.length > 4">
+  {{ pName | json }}
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-5">
+      <input
+        #productDetails
+        type="text"
+        class="form-control"
+        id="newName"
+        name="newName"
+        placeholder="Enter new Name"
+      />
+      <button
+        type="submit"
+        class="btn text-white bg-blue-500 hover:bg-black"
+        (click)="onSendName(productDetails.value)"
+      >
+        Update Name
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<pre>--------</pre>
+<app-update-person
+  [pName]="personName"
+  (getUpdatedName)="onUpdatePersonName($event)"
+></app-update-person>
+{{ newEnteredName | json }}
+<pre>--------</pre>

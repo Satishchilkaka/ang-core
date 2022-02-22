@@ -21,8 +21,8 @@ import { ProductComponent } from './features/product/product.component';
 import { LoginFormComponent } from './features/login-form/login-form.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { OutProductComponent } from './concepts/in-out/out-product/out-product.component';
-import { InProductComponent } from './concepts/in-out/Out-product/in-product/in-product.component';
-
+import { InProductComponent } from './concepts/in-out/out-product/in-product/in-product.component';
+import { SharedPersonModule } from './shared-person/shared-person.module';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,10 +37,9 @@ import { InProductComponent } from './concepts/in-out/Out-product/in-product/in-
     PersonInfoComponent,
     PersonDetailsComponent,
     ProductComponent,
-
     LoginFormComponent,
-     OutProductComponent,
-     InProductComponent,
+    OutProductComponent,
+    InProductComponent,
 
 
   ],
@@ -51,6 +50,7 @@ import { InProductComponent } from './concepts/in-out/Out-product/in-product/in-
     FooterModule,
     TestModule,
     ReactiveFormsModule,
+    SharedPersonModule
 
   ],
 

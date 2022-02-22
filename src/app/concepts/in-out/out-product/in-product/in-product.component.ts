@@ -9,10 +9,9 @@ export class InProductComponent implements OnInit {
 
   constructor() { }
   @Input() testProduct: any;
-  @Input() product: any;
   @Output() getProductInfo = new EventEmitter<any>();
   onSendProduct(name: string, price: string, description: string) {
-    this.getProductInfo.emit({ name: name, price: price, description: description });
+    this.getProductInfo.emit({ name: name, $price: price, description: description });
     // this.getProductInfo.emit(price);
     // this.getProductInfo.emit(description);
   }
