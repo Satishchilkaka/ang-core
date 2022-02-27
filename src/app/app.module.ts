@@ -23,6 +23,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { OutProductComponent } from './concepts/in-out/out-product/out-product.component';
 import { InProductComponent } from './concepts/in-out/out-product/in-product/in-product.component';
 import { SharedPersonModule } from './shared-person/shared-person.module';
+import { ObservableSubscriptionComponent } from './subscription/observable-subscription/observable-subscription.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,6 +41,7 @@ import { SharedPersonModule } from './shared-person/shared-person.module';
     LoginFormComponent,
     OutProductComponent,
     InProductComponent,
+    ObservableSubscriptionComponent,
 
 
   ],
