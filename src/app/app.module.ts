@@ -24,6 +24,7 @@ import { OutProductComponent } from './concepts/in-out/out-product/out-product.c
 import { InProductComponent } from './concepts/in-out/out-product/in-product/in-product.component';
 import { SharedPersonModule } from './shared-person/shared-person.module';
 import { ObservableSubscriptionComponent } from './subscription/observable-subscription/observable-subscription.component';
+import { MatFormFieldModule } from '@angular/material/form-field';
 @NgModule({
   declarations: [
     AppComponent,
@@ -44,6 +45,7 @@ import { ObservableSubscriptionComponent } from './subscription/observable-subsc
     ObservableSubscriptionComponent,
 
 
+
   ],
   imports: [
     BrowserModule,
@@ -52,7 +54,8 @@ import { ObservableSubscriptionComponent } from './subscription/observable-subsc
     FooterModule,
     TestModule,
     ReactiveFormsModule,
-    SharedPersonModule
+    SharedPersonModule,
+    MatFormFieldModule
 
   ],
 

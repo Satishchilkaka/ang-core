@@ -18,6 +18,21 @@
             formControlName="password"
           />
         </div>
+        <mat-error
+          class="error-required"
+          *ngIf="login.get('email')?.hasError('required')"
+        >
+          Email is required
+        </mat-error>
+        <mat-error
+          class="error-required"
+          *ngIf="
+            login.controls.password.hasError('validation.type') &&
+            login.controls.password.hasError('required')
+          "
+        >
+          Password min length is 6
+        </mat-error>
         <button
           class="ml-8 whitespace-nowrap inline-flex items-left justify-center px-4 py-2 border border-transparent rounded-md shadow-sm text-base font-medium text-white bg-blue-500 hover:bg-black"
           type="submit"

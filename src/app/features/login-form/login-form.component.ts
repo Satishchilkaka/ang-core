@@ -8,7 +8,7 @@ import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms'
 export class LoginFormComponent implements OnInit {
   login = new FormGroup({
     email: new FormControl('', { validators: [Validators.required] }),
-    password: new FormControl('', { validators: [Validators.required] })
+    password: new FormControl('', { validators: [Validators.required, Validators.min(6)] })
   })
   constructor() { }
 
