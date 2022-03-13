@@ -4,13 +4,22 @@
       <form [formGroup]="login" (ngSubmit)="data()">
         <div class="form-group">
           <input
+            matInput
             type="email"
             name="email"
             placeholder="Email"
             class="form-control"
             formControlName="email"
+            required
           />
+          <mat-error
+            class="error-required"
+            *ngIf="login.get('email')?.hasError('required')"
+          >
+            Email is required
+          </mat-error>
           <input
+            matInput
             type="password"
             name="password"
             placeholder="Password"
@@ -20,15 +29,9 @@
         </div>
         <mat-error
           class="error-required"
-          *ngIf="login.get('email')?.hasError('required')"
-        >
-          Email is required
-        </mat-error>
-        <mat-error
-          class="error-required"
           *ngIf="
-            login.controls.password.hasError('validation.type') &&
-            login.controls.password.hasError('required')
+            login.controls.password.hasError('required') &&
+            login.controls.password.hasError('maxlength')
           "
         >
           Password min length is 6
