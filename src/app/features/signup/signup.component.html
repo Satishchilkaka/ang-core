@@ -1,0 +1,53 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-6">
+      <form [formGroup]="registration" (ngSubmit)="data()">
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="First Name"
+            id="firstName"
+            formControlName="firstName"
+          />
+          <label for="lastName">Last Name</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Last Name"
+            id="lastName"
+            formControlName="lastName"
+          />
+
+          <label for="email">Email :</label>
+          <input
+            type="email"
+            name="email"
+            placeholder="Email"
+            class="form-control"
+            formControlName="email"
+          />
+          <label for="password">Password :</label>
+          <input
+            type="password"
+            name="password"
+            placeholder="Password"
+            class="form-control"
+            formControlName="password"
+          />
+          <br />
+        </div>
+        <button class="btn btn-primary" type="submit" (click)="signIn()">
+          Sign Up
+        </button>
+        <button class="btn btn-primary" type="submit" (click)="getRegData()">
+          getData
+        </button>
+      </form>
+      <div class="form-val">
+        {{ registration.value | json }}
+      </div>
+    </div>
+  </div>
+</div>

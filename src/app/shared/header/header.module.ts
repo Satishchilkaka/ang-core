@@ -4,11 +4,15 @@ import { HeaderComponent } from './header.component';
 import { RouterModule, Routes } from '@angular/router';
 import { PersonComponent } from '../../shared-person/person/person.component';
 import { OutProductComponent } from '../../concepts/in-out/out-product/out-product.component';
+import { LoginFormComponent } from 'src/app/features/login-form/login-form.component';
+import { SignupComponent } from 'src/app/features/signup/signup.component';
 
 
 const appRoutes: Routes = [
+  { path: 'logIn', component: LoginFormComponent },
   { path: 'inputOutput', component: OutProductComponent },
   { path: 'ngModule', component: PersonComponent },
+  { path: 'reactiveForms', component: SignupComponent },
 
 ]
 @NgModule({
@@ -25,4 +29,4 @@ const appRoutes: Routes = [
   declarations: [HeaderComponent]
 })
 export class HeaderModule { }
-// Test 
+

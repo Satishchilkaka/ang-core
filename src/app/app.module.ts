@@ -27,6 +27,7 @@ import { ObservableSubscriptionComponent } from './subscription/observable-subsc
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { RouterModule, Routes } from '@angular/router';
 import { PersonComponent } from './shared-person/person/person.component';
+import { SignupComponent } from './features/signup/signup.component';
 
 
 
@@ -53,6 +54,7 @@ const appRoutes: Routes = [
     OutProductComponent,
     InProductComponent,
     ObservableSubscriptionComponent,
+    SignupComponent,
 
 
 
