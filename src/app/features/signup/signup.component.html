@@ -19,7 +19,33 @@
             id="lastName"
             formControlName="lastName"
           />
-
+          <label for="phoneNumber">Phone Number</label>
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Phone Number"
+            id="phoneNumber"
+            formControlName="phoneNumber"
+          />
+          <div>
+            <label for="gender">Gender</label>
+            <button
+              class="btn dropdown-toggle"
+              type="button"
+              id="dropdownMenuButton"
+              aria-expanded="false"
+              mdbDropdownToggle
+            ></button>
+            <ul
+              mdbDropdownMenu
+              class="dropdown-menu"
+              aria-labelledby="dropdownMenuButton"
+            >
+              <li><a class="dropdown-item">Action</a></li>
+              <li><a class="dropdown-item">Another action</a></li>
+              <li><a class="dropdown-item">Something else here</a></li>
+            </ul>
+          </div>
           <label for="email">Email :</label>
           <input
             type="email"
