@@ -7,14 +7,27 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent implements OnInit {
+
+  nameValidator() {
+    return [Validators.required, Validators.minLength(3),
+    Validators.pattern('^[a-zA-Z0-9_ ]*$'), Validators.maxLength(25)]
+  }
+
   registration = new FormGroup({
-    firstName: new FormControl('', [Validators.required, Validators.minLength(3)
+    firstName: new FormControl('', [Validators.required, Validators.minLength(3)]),
+    lastName: new FormControl('', [Validators.required, Validators.minLength(3),
+    Validators.pattern('^[a-zA-Z0-9_ ]*$'), Validators.maxLength(25),
     ]),
-    lastName: new FormControl('', [Validators.required, Validators.minLength(3)]),
-    phoneNumber: new FormControl('', [Validators.required, Validators.minLength(10)]),
+    phoneNumber: new FormControl('', [Validators.required, Validators.minLength(10),
+    Validators.pattern("^((\\+91-?)|0)?[0-9]{10}$")]),
+
     email: new FormControl('', { validators: [Validators.required] }),
     password: new FormControl('', { validators: [Validators.required] })
   })
+  // nameValidator( ){
+  //   return this.registration.get('firstName').hasError('required') ? 'You must enter a value' :
+  //     this.registration.get('firstName').hasError('pattern') ? 'Not a valid name' : '';
+  // }
   signIn() {
     console.log('login');
   }

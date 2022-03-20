@@ -25,11 +25,14 @@ import { InProductComponent } from './concepts/in-out/out-product/in-product/in-
 import { SharedPersonModule } from './shared-person/shared-person.module';
 import { ObservableSubscriptionComponent } from './subscription/observable-subscription/observable-subscription.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
 import { RouterModule, Routes } from '@angular/router';
 import { PersonComponent } from './shared-person/person/person.component';
 import { SignupComponent } from './features/signup/signup.component';
 
-
+import { FormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatSelectModule } from '@angular/material/select';
 
 const appRoutes: Routes = [
   { path: 'inputOutput', component: OutProductComponent },
@@ -58,8 +61,10 @@ const appRoutes: Routes = [
 
 
 
+
   ],
   imports: [
+
     BrowserModule,
     AppRoutingModule,
     HeaderModule,
@@ -68,10 +73,15 @@ const appRoutes: Routes = [
     ReactiveFormsModule,
     SharedPersonModule,
     MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSelectModule,
     RouterModule.forRoot(
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
-    )
+    ),
+
 
   ],
 

@@ -3,14 +3,36 @@
     <div class="col-md-6">
       <form [formGroup]="registration" (ngSubmit)="data()">
         <div class="form-group">
+          <br />
           <label for="firstName">First Name</label>
-          <input
-            type="text"
-            class="form-control"
-            placeholder="First Name"
-            id="firstName"
-            formControlName="firstName"
-          />
+          <mat-form-field appearance="fill">
+            <mat-label>First Name</mat-label>
+            <input matInput type="text" />
+          </mat-form-field>
+
+          <!-- <label for="firstName">First Name</label>
+          <mat-form-field class="full-width">
+            <mat-label>First Name</mat-label>
+            <input
+              type="text"
+              class="form-control"
+              placeholder="First Name"
+              id="firstName"
+              formControlName="firstName"
+            />
+          </mat-form-field> -->
+          <mat-error class="error-required">
+            <span *ngIf="registration.get('firstName')?.hasError('required')">
+              First name is required.
+            </span>
+            <span *ngIf="registration.get('firstName')?.hasError('pattern')">
+              First name is not valid please enter valid one.
+            </span>
+            <span *ngIf="registration.get('firstName')?.hasError('maxlength')">
+              First name must be less than 25 characters.
+            </span>
+          </mat-error>
+          <br />
           <label for="lastName">Last Name</label>
           <input
             type="text"
@@ -19,6 +41,18 @@
             id="lastName"
             formControlName="lastName"
           />
+          <mat-error class="error-required">
+            <span *ngIf="registration.get('lastName')?.hasError('required')">
+              Last name is required.
+            </span>
+            <span *ngIf="registration.get('lastName')?.hasError('pattern')">
+              Last name is not valid please enter valid one.
+            </span>
+            <span *ngIf="registration.get('lastName')?.hasError('maxlength')">
+              Last name must be less than 25 characters.
+            </span>
+          </mat-error>
+          <br />
           <label for="phoneNumber">Phone Number</label>
           <input
             type="text"
@@ -27,25 +61,15 @@
             id="phoneNumber"
             formControlName="phoneNumber"
           />
-          <div>
-            <label for="gender">Gender</label>
-            <button
-              class="btn dropdown-toggle"
-              type="button"
-              id="dropdownMenuButton"
-              aria-expanded="false"
-              mdbDropdownToggle
-            ></button>
-            <ul
-              mdbDropdownMenu
-              class="dropdown-menu"
-              aria-labelledby="dropdownMenuButton"
-            >
-              <li><a class="dropdown-item">Action</a></li>
-              <li><a class="dropdown-item">Another action</a></li>
-              <li><a class="dropdown-item">Something else here</a></li>
-            </ul>
-          </div>
+          <mat-error class="error-required">
+            <span *ngIf="registration.get('phoneNumber')?.hasError('required')">
+              Phone Number is required
+            </span>
+            <span *ngIf="registration.get('phoneNumber')?.hasError('pattern')">
+              Phone Number is not valid please enter valid one
+            </span>
+          </mat-error>
+          <br />
           <label for="email">Email :</label>
           <input
             type="email"
@@ -64,16 +88,43 @@
           />
           <br />
         </div>
-        <button class="btn btn-primary" type="submit" (click)="signIn()">
-          Sign Up
-        </button>
-        <button class="btn btn-primary" type="submit" (click)="getRegData()">
+
+        <!-- <button class="btn btn-primary" type="submit" (click)="getRegData()">
           getData
-        </button>
+        </button> -->
       </form>
+      <button
+        class="btn btn-primary"
+        type="submit"
+        [disabled]="!registration.valid"
+        (click)="signIn()"
+      >
+        Sign Up
+      </button>
       <div class="form-val">
         {{ registration.value | json }}
       </div>
     </div>
   </div>
 </div>
+<!-- <label for="gender">Gender: </label>
+          <select name="select">
+            <option value="empty-value"> </option>
+            <option value="alpha-a">Alpha </option>
+            <option value="beta-b"> Beta</option>
+          </select> -->
+<mat-form-field appearance="fill">
+  <mat-label>Input</mat-label>
+  <input matInput />
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Select</mat-label>
+  <mat-select>
+    <mat-option value="one">First option</mat-option>
+    <mat-option value="two">Second option</mat-option>
+  </mat-select>
+</mat-form-field>
+<mat-form-field appearance="fill">
+  <mat-label>Textarea</mat-label>
+  <textarea matInput></textarea>
+</mat-form-field>
