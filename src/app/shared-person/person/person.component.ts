@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import ngModuleDef from '../../../assets/ngModule/ngmoduleNote.json'
 @Component({
   selector: 'app-person',
   templateUrl: './person.component.html',
@@ -21,6 +21,10 @@ export class PersonComponent implements OnInit {
       this.newEnteredName = this.personName.slice(-1).pop();
     }
   }
+  ngModuleDefinition = ngModuleDef.Definition
+  ngModuleProperties = ngModuleDef.properties
+  ngModuleIntroduction = ngModuleDef.intro
+  ngModuleExample = ngModuleDef.example
 
   ngOnInit(): void {
   }

@@ -1,0 +1,15 @@
+{
+    "Definition": "In Angular, an NgModule allows you to bundle components, directives, pipes, and providers together into one re-usable module.",
+    "properties": [
+        "declarations",
+        "providers",
+        "imports",
+        "exports"
+    ],
+    "intro": "Components, directives, pipes are declared once and only once in an NgModule. The same component/direcive/pipe cannot be declared in multiple modules. NgModules/component/directives/pipes can be exported by your module. But only other NgModules can be imported into your module.",
+    "example": [
+        "shared-person.module is a ngModule which has UpdatePrivateComponent & UpdatePersonComponent components.",
+        "It has input and out directives.",
+        "When enter a new name it will update array and display in the list."
+    ]
+}

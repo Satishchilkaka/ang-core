@@ -25,6 +25,16 @@ import { InProductComponent } from './concepts/in-out/out-product/in-product/in-
 import { SharedPersonModule } from './shared-person/shared-person.module';
 import { ObservableSubscriptionComponent } from './subscription/observable-subscription/observable-subscription.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
+import { RouterModule, Routes } from '@angular/router';
+import { PersonComponent } from './shared-person/person/person.component';
+
+
+
+const appRoutes: Routes = [
+  { path: 'inputOutput', component: OutProductComponent },
+  { path: 'ngModule', component: PersonComponent },
+
+]
 @NgModule({
   declarations: [
     AppComponent,
@@ -55,10 +65,16 @@ import { MatFormFieldModule } from '@angular/material/form-field';
     TestModule,
     ReactiveFormsModule,
     SharedPersonModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    RouterModule.forRoot(
+      appRoutes,
+      { enableTracing: true } // <-- debugging purposes only
+    )
 
   ],
 
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+

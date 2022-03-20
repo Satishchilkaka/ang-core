@@ -3,5 +3,19 @@
   [pName]="personName"
   (getUpdatedName)="onUpdatePersonName($event)"
 ></app-update-person>
-{{ newEnteredName | json }}
-<pre>--------</pre>
+<pre>
+ New name: {{ newEnteredName | json }}
+</pre>
+<strong>{{ ngModuleDefinition }}</strong>
+<p>An NgModule has {{ ngModuleProperties.length }} key properties</p>
+<div *ngFor="let prop of ngModuleProperties">
+  <ul>
+    <li>{{ prop }}</li>
+  </ul>
+</div>
+<p>{{ ngModuleIntroduction }}</p>
+<div *ngFor="let example of ngModuleExample">
+  <ul class="list">
+    <li class="list-item">{{ example }}</li>
+  </ul>
+</div>
