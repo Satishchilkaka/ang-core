@@ -33,6 +33,7 @@ import { SignupComponent } from './features/signup/signup.component';
 import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
+import { SubscriptionComponent } from './features/subscription/subscription.component';
 
 const appRoutes: Routes = [
   { path: 'inputOutput', component: OutProductComponent },
@@ -58,6 +59,7 @@ const appRoutes: Routes = [
     InProductComponent,
     ObservableSubscriptionComponent,
     SignupComponent,
+    SubscriptionComponent,
 
 
 
