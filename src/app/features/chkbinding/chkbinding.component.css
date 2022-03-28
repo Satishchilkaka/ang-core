@@ -3,3 +3,13 @@ mat-checkbox {
   font-family: Roboto, "Helvetica Neue", sans-serif;
   font-size: 16px;
 }
+.btn-primary {
+  background-color: #00a1ff;
+  border-color: #00a1ff;
+}
+.btn-primary:hover {
+  background-color: black;
+}
+:host {
+  width: 100%;
+}

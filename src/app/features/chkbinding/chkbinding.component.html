@@ -1,18 +1,15 @@
+<hr />
+<pre>
 <section class="traveler-consent">
-  <mat-checkbox
-    #chkConsent
-    type="checkbox"
-    class="input"
-    id="chkConsent"
-    data-cy="chkConsent"
+  <mat-checkbox #chkConsent type="checkbox" id="chkConsent" data-cy="chkConsent"
     >I agree to the terms and conditions</mat-checkbox
   >
 </section>
-
+</pre>
 <button
   class="btn btn-primary"
   type="submit"
-  [disabled]="!chkConsent"
+  [disabled]="chkConsent.checked == false"
   (click)="getRegData()"
 >
   Sign Up

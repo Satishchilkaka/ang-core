@@ -13,6 +13,6 @@ export class ChkbindingComponent implements OnInit {
   ngOnInit(): void {
   }
   getRegData() {
-    console.log('test', this.registration.value)
+    console.log('test')
   }
 }
