@@ -34,6 +34,8 @@ import { FormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatSelectModule } from '@angular/material/select';
 import { SubscriptionComponent } from './features/subscription/subscription.component';
+import { ChkbindingComponent } from './features/chkbinding/chkbinding.component';
+import { MatCheckboxModule } from '@angular/material/checkbox';
 
 const appRoutes: Routes = [
   { path: 'inputOutput', component: OutProductComponent },
@@ -60,6 +62,7 @@ const appRoutes: Routes = [
     ObservableSubscriptionComponent,
     SignupComponent,
     SubscriptionComponent,
+    ChkbindingComponent,
 
 
 
@@ -83,6 +86,7 @@ const appRoutes: Routes = [
       appRoutes,
       { enableTracing: true } // <-- debugging purposes only
     ),
+    MatCheckboxModule
 
 
   ],

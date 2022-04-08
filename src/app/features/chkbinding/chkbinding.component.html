@@ -1,16 +1,21 @@
 <hr />
-<pre>
-<section class="traveler-consent">
-  <mat-checkbox #chkConsent type="checkbox" id="chkConsent" data-cy="chkConsent"
-    >I agree to the terms and conditions</mat-checkbox
+<ng-container>
+  <section class="user-consent">
+    <mat-checkbox
+      #chkConsent
+      type="checkbox"
+      id="chkConsent"
+      data-cy="chkConsent"
+      >I agree to the terms and conditions</mat-checkbox
+    >
+  </section>
+
+  <button
+    class="btn btn-primary"
+    type="submit"
+    [disabled]="chkConsent.checked == false"
+    (click)="getRegData()"
   >
-</section>
-</pre>
-<button
-  class="btn btn-primary"
-  type="submit"
-  [disabled]="chkConsent.checked == false"
-  (click)="getRegData()"
->
-  Sign Up
-</button>
+    Sign Up
+  </button>
+</ng-container>
