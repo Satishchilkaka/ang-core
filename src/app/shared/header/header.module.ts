@@ -7,6 +7,7 @@ import { OutProductComponent } from '../../concepts/in-out/out-product/out-produ
 import { LoginFormComponent } from 'src/app/features/login-form/login-form.component';
 import { SignupComponent } from 'src/app/features/signup/signup.component';
 import { SubscriptionComponent } from 'src/app/features/subscription/subscription.component';
+import { WeatherDataComponent } from 'src/app/weather/weather-data/weather-data.component';
 
 
 const appRoutes: Routes = [
@@ -15,6 +16,7 @@ const appRoutes: Routes = [
   { path: 'ngModule', component: PersonComponent },
   { path: 'reactiveForms', component: SignupComponent },
   { path: 'subscription', component: SubscriptionComponent },
+  { path: 'apicall', component: WeatherDataComponent },
 
 ]
 @NgModule({

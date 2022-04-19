@@ -36,10 +36,12 @@ import { MatSelectModule } from '@angular/material/select';
 import { SubscriptionComponent } from './features/subscription/subscription.component';
 import { ChkbindingComponent } from './features/chkbinding/chkbinding.component';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { WeatherDataComponent } from './weather/weather-data/weather-data.component';
 
 const appRoutes: Routes = [
   { path: 'inputOutput', component: OutProductComponent },
   { path: 'ngModule', component: PersonComponent },
+  { path: 'ngModule', component: WeatherDataComponent },
 
 ]
 @NgModule({
@@ -63,6 +65,7 @@ const appRoutes: Routes = [
     SignupComponent,
     SubscriptionComponent,
     ChkbindingComponent,
+    WeatherDataComponent,
 
 
 
