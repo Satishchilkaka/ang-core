@@ -27,17 +27,17 @@ export class SubscriptionComponent implements OnInit {
       this.subscription2.unsubscribe();
       console.log('unsubscribed');
     }
-      , 5000);
+      , 500);
 
   }
 
   ngOnDestroy() {
-    // setTimeout(() => {
-    //   this.subscription.unsubscribe();
-    // }, 5000);
-    //  this.subscription.unsubscribe();
+    setTimeout(() => {
+      this.subscription.unsubscribe();
+    }, 500);
+    this.subscription.unsubscribe();
 
-    // console.log('destroyed');
+    console.log('destroyed');
   }
 
 }

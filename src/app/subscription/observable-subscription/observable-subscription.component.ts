@@ -14,10 +14,10 @@ export class ObservableSubscriptionComponent implements OnInit {
   ngOnInit(): void {
     this.observable = interval(1000);
     this.subscription = this.observable.subscribe((x: any) => console.log(x));
-    // setTimeout(() => {
-    //   this.subscription.unsubscribe();
-    // }
-    //   , 5000);
+    setTimeout(() => {
+      this.subscription.unsubscribe();
+    }
+      , 5000);
 
   }
 
