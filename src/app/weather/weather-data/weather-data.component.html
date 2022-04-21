@@ -1,5 +1,18 @@
-<p>weather-data works!</p>
 <!-- <button (click)="getData()">Get weather data</button> -->
 <button class="btn btn-primary" type="button" (click)="getNewWeatherData()">
   getData
 </button>
+
+<form [formGroup]="container">
+  <input
+    type="text"
+    name="search"
+    placeholder="search city name"
+    class="form-control"
+    formControlName="searchCityName"
+  />
+</form>
+<button class="btn btn-primary" type="button" (click)="getAData()">
+  getData
+</button>
+<pre> {{ tempData | json }}</pre>
