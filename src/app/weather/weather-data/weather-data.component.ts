@@ -26,7 +26,6 @@ export class WeatherDataComponent implements OnInit {
   tempData: any
 
   constructor(
-
     private weatherService: WeatherServicesService,
     private http: HttpClient
   ) { }
@@ -39,12 +38,11 @@ export class WeatherDataComponent implements OnInit {
 
       searchCityName: new FormControl('', [Validators.required, Validators.minLength(3)])
     });
-
     return this.resultsData$ = this.container.get('searchCityName')!.valueChanges.pipe(debounceTime(1000),
-      switchMap(searchCity => this.weatherService.getWeatherReport(searchCity)),
-
-
+      switchMap(searchCity => this.weatherService.getWeatherReport(searchCity))
     );
+  }
+  getWeatherDataForCity() {
 
   }
 

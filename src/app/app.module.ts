@@ -42,7 +42,7 @@ import { HttpClientModule } from '@angular/common/http';
 const appRoutes: Routes = [
   { path: 'inputOutput', component: OutProductComponent },
   { path: 'ngModule', component: PersonComponent },
-  { path: 'ngModule', component: WeatherDataComponent },
+
 
 ]
 @NgModule({
