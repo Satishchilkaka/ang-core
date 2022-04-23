@@ -1,1 +1,7 @@
-<pre>{{ subscription }}</pre>
+<button class="btn btn-primary" type="button" (click)="getSubCount()">
+  getData
+</button>
+
+<pre>
+    {{ getOpenSub | json }}
+</pre>
