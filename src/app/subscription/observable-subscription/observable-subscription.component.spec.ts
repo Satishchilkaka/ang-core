@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { Observable } from 'rxjs';
 
 import { ObservableSubscriptionComponent } from './observable-subscription.component';
 
@@ -8,9 +9,9 @@ describe('ObservableSubscriptionComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ObservableSubscriptionComponent ]
+      declarations: [ObservableSubscriptionComponent]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
@@ -22,4 +23,14 @@ describe('ObservableSubscriptionComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('Basic Observables', () => {
+    const results: ArrayLike<any> = [1];
+
+    expect(results).toEqual([1]);
+  })
 });
+describe('test', () => {
+  it('should create', () => {
+    expect(1).toBe(1);
+  });
+})

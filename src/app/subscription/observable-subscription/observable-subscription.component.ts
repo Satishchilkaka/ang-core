@@ -17,17 +17,17 @@ export class ObservableSubscriptionComponent implements OnInit {
     setTimeout(() => {
       this.subscription.unsubscribe();
     }
-      , 5000);
+      , 5000, console.log('destroyed'));
 
   }
 
   ngOnDestroy() {
     setTimeout(() => {
       this.subscription.unsubscribe();
-    }, 5000);
+    }, 5000, console.log('destroyed'));
     // this.subscription.unsubscribe();
 
-    console.log('destroyed');
+
   }
 
 }

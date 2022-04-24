@@ -19,28 +19,28 @@ export class SubscriptionComponent implements OnInit {
 
 
   }
-  getSubCount() {
-    this.observable1 = interval(1000);
-    // this.observable2 = interval(1000);
+  // getSubCount() {
+  //   this.observable1 = interval(1000);
+  //   // this.observable2 = interval(1000);
 
-    this.getOpenSub = this.observable1.subscribe((x: any) => { return JSON.stringify(x) });
-    // this.subscription2 = this.observable2.subscribe((x: any) => console.log('second', x));
+  //   this.getOpenSub = this.observable1.subscribe((x: any) => { return JSON.stringify(x) });
+  //   // this.subscription2 = this.observable2.subscribe((x: any) => console.log('second', x));
 
-    setTimeout(() => {
-      this.getOpenSub.unsubscribe();
-      // this.subscription2.unsubscribe();
-      console.log('unsubscribed');
-    }
-      , 5000);
-  }
+  //   setTimeout(() => {
+  //     this.getOpenSub.unsubscribe();
+  //     // this.subscription2.unsubscribe();
+  //     console.log('unsubscribed');
+  //   }
+  //     , 5000);
+  // }
 
   ngOnDestroy() {
-    setTimeout(() => {
-      this.getOpenSub.unsubscribe();
-    }, 500);
-    this.getOpenSub.unsubscribe();
+    //   setTimeout(() => {
+    //     this.getOpenSub.unsubscribe();
+    //   }, 500);
+    //   this.getOpenSub.unsubscribe();
 
-    console.log('destroyed');
+    //   console.log('destroyed');
   }
 
 }
