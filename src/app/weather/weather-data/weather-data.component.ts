@@ -5,6 +5,8 @@ import { debounceTime, switchMap } from 'rxjs/operators';
 import { WeatherInterface } from '../weather-interface';
 import { Subscription } from 'rxjs';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { ArrayType } from '@angular/compiler';
+import { WeatherData } from './weatherData';
 @Component({
   selector: 'app-weather-data',
   templateUrl: './weather-data.component.html',
@@ -24,16 +26,18 @@ export class WeatherDataComponent implements OnInit {
   temp_c: any;
 
   tempData: any
-  weTempData = [];
+  weatherTempData: WeatherData[] = [];
   constructor(
     private weatherService: WeatherServicesService,
     private http: HttpClient
+
   ) { }
 
 
 
 
   ngOnInit(): void {
+
     this.container = new FormGroup({
 
       searchCityName: new FormControl('', [Validators.required, Validators.minLength(3)])
@@ -44,7 +48,7 @@ export class WeatherDataComponent implements OnInit {
     this.subscription = this.resultsData$.subscribe((newData: WeatherInterface) => {
       console.log('newData is', newData);
 
-      return this.tempData = {
+      this.tempData = {
 
         location: newData.location.name,
         region: newData.location.region,
@@ -52,6 +56,19 @@ export class WeatherDataComponent implements OnInit {
         tz_id: newData.location.tz_id,
         temp_c: newData.current.temp_c,
       }
+      const weData = this.weatherTempData.push(this.tempData);
+      console.log('weData is', this.weatherTempData[0]);
+      return this.weatherTempData[0]
+
+
+      // return this.tempData = {
+
+      //   location: newData.location.name,
+      //   region: newData.location.region,
+      //   country: newData.location.country,
+      //   tz_id: newData.location.tz_id,
+      //   temp_c: newData.current.temp_c,
+      // }
 
     })
   }
@@ -61,7 +78,7 @@ export class WeatherDataComponent implements OnInit {
   }
   getNewWeatherData() {
     this.weatherService.getWeatherData('New York').subscribe(data => {
-      return console.log('data is', data);
+      return console.log('data is', this.weatherTempData[0]);
 
     })
   }

@@ -12,7 +12,16 @@
     formControlName="searchCityName"
   />
 </form>
-<button class="btn btn-primary" type="button" (click)="getAData()">
+<button class="btn btn-primary" type="button" (click)="getNewWeatherData()">
   getData
 </button>
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title">Weather in {{ weatherTempData[0].location }}</h5>
+    <p class="card-text"></p>
+    <ul>
+      <li>Temperature: {{ weatherTempData[0].location }}</li>
+    </ul>
+  </div>
+</div>
 <pre> {{ tempData | json }}</pre>
