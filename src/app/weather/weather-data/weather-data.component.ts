@@ -32,16 +32,53 @@ export class WeatherDataComponent implements OnInit {
     private http: HttpClient
 
   ) { }
-
+  isInputCity = false;
 
 
 
   ngOnInit(): void {
-
     this.container = new FormGroup({
 
       searchCityName: new FormControl('', [Validators.required, Validators.minLength(3)])
     });
+
+    // this.container = new FormGroup({
+
+    //   searchCityName: new FormControl('', [Validators.required, Validators.minLength(3)])
+    // });
+    // this.resultsData$ = this.container.get('searchCityName')!.valueChanges.pipe(debounceTime(1000),
+    //   switchMap(searchCity => this.weatherService.getWeatherReport(searchCity))
+    // );
+    // this.subscription = this.resultsData$.subscribe((newData: WeatherInterface) => {
+    //   console.log('newData is', newData);
+
+    //   this.tempData = {
+
+    //     location: newData.location.name,
+    //     region: newData.location.region,
+    //     country: newData.location.country,
+    //     tz_id: newData.location.tz_id,
+    //     temp_c: newData.current.temp_c,
+    //   }
+    //   const weData = this.weatherTempData.push(this.tempData);
+    //   console.log('weData is', this.weatherTempData[0]);
+    //   return this.weatherTempData[0]
+
+
+    // return this.tempData = {
+
+    //   location: newData.location.name,
+    //   region: newData.location.region,
+    //   country: newData.location.country,
+    //   tz_id: newData.location.tz_id,
+    //   temp_c: newData.current.temp_c,
+    // }
+
+    //  })
+  }
+
+  getAData() {
+
     this.resultsData$ = this.container.get('searchCityName')!.valueChanges.pipe(debounceTime(1000),
       switchMap(searchCity => this.weatherService.getWeatherReport(searchCity))
     );
@@ -71,9 +108,6 @@ export class WeatherDataComponent implements OnInit {
       // }
 
     })
-  }
-
-  getAData() {
 
   }
   getNewWeatherData() {

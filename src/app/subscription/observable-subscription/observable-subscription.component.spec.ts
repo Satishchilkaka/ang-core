@@ -1,5 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-import { Observable } from 'rxjs';
+import { from, of } from 'rxjs';
 
 import { ObservableSubscriptionComponent } from './observable-subscription.component';
 
@@ -24,9 +24,19 @@ describe('ObservableSubscriptionComponent', () => {
     expect(component).toBeTruthy();
   });
   it('Basic Observables', () => {
-    const results: ArrayLike<any> = [1];
+    const results: any = [];
+    const source = of(1, 2, 3, 4, 5);
+    const subscription = source.subscribe(
+      (n: number) => results.push(n),
+      (err: any) => console.error(err),
+      () => console.log('done'),
 
-    expect(results).toEqual([1]);
+    );
+
+    expect(results).toEqual([1, 2, 3, 4, 5]);
+
+
+
   })
 });
 describe('test', () => {

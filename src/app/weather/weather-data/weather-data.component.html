@@ -1,7 +1,7 @@
 <!-- <button (click)="getData()">Get weather data</button> -->
-<button class="btn btn-primary" type="button" (click)="getNewWeatherData()">
+<!-- <button class="btn btn-primary" type="button" (click)="getNewWeatherData()">
   getData
-</button>
+</button> -->
 
 <form [formGroup]="container">
   <input
@@ -12,10 +12,15 @@
     formControlName="searchCityName"
   />
 </form>
-<button class="btn btn-primary" type="button" (click)="getNewWeatherData()">
+<button
+  class="btn btn-primary"
+  type="button"
+  (click)="getNewWeatherData()"
+  [disabled]="!isInputCity"
+>
   getData
 </button>
-<div class="card">
+<!-- <div class="card">
   <div class="card-body">
     <h5 class="card-title">Weather in {{ weatherTempData[0].location }}</h5>
     <p class="card-text"></p>
@@ -24,4 +29,4 @@
     </ul>
   </div>
 </div>
-<pre> {{ tempData | json }}</pre>
+<pre> {{ tempData | json }}</pre> -->

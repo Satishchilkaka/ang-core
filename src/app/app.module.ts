@@ -38,6 +38,8 @@ import { ChkbindingComponent } from './features/chkbinding/chkbinding.component'
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { WeatherDataComponent } from './weather/weather-data/weather-data.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ActionsComponent } from './weather/weather-data/actions/actions.component';
+
 
 const appRoutes: Routes = [
   { path: 'inputOutput', component: OutProductComponent },
@@ -67,6 +69,8 @@ const appRoutes: Routes = [
     SubscriptionComponent,
     ChkbindingComponent,
     WeatherDataComponent,
+    ActionsComponent,
+
 
 
 
