@@ -32,7 +32,7 @@ export class WeatherDataComponent implements OnInit {
     private http: HttpClient
 
   ) { }
-  isInputCity = false;
+  isInputCity = true;
 
 
 
